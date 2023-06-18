@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Feliz Día del Padre</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Feliz Día del Padre</h1>
+      <p class="message">Querido papá, de parte de tu familia,</p>
+      <p class="message">
+        ¡Felicitaciones por ser un gran papá! Tu amor, dedicación y apoyo son
+        invaluables.<br />
+        Eres un ejemplo para nosotros y nos inspiras cada día. Te queremos
+        mucho.
+      </p>
+      <script>
+        // Función para aplicar el efecto de animación
+        function animateText() {
+          const title = document.querySelector(".title");
+          const message = document.querySelectorAll(".message");
+
+          // Agregar clase de animación al título
+          title.classList.add("animate");
+
+          // Agregar clase de animación a cada párrafo del mensaje
+          message.forEach((paragraph, index) => {
+            paragraph.style.animationDelay = `${index * 0.3}s`;
+            paragraph.classList.add("animate");
+          });
+        }
+
+        // Llamar a la función cuando el documento se haya cargado
+        document.addEventListener("DOMContentLoaded", animateText);
+      </script>
+    </div>
+  </body>
+</html>
